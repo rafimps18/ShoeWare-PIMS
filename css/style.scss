@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+
 
 $primary-color: #000000;
 $secondary-color: #535353;
@@ -31,22 +33,17 @@ body {
     background-color: white;
 }
 
-.login-right {
-    background-color: #eee;
-    display: flex;
-    justify-content: center;
-}
-
 .login-header {
     margin-top: 0px;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
     h1 {
         font-size: 40px;
         margin-bottom: 10px;
     }
 
     p {
-        opacity: .7;
+        font-size: 30px;
+        opacity: .90;
     }
 }
 
@@ -128,6 +125,37 @@ button {
     font-size: 18px;
     height: 55px;
     cursor: pointer;
+}
+
+/* Right Side*/
+
+.login-right {
+    background-color: #eee;
+    display: flex;
+    justify-content: center;
+}
+
+.company-logo-and-name{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+$img-size: 150px;
+
+img {
+    margin:20px;
+    display: block;
+    width: $img-size;
+    height: $img-size;
+    border-radius: 10px;
+}
+
+h1.company-name{
+    font-family: 'Righteous', cursive;
+    font-size: 60px;
 }
 
 /* Responsiveness */
