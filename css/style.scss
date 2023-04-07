@@ -156,7 +156,33 @@ img {
 h1.company-name{
     font-family: 'Righteous', cursive;
     font-size: 60px;
+    background: conic-gradient($primary-color, $secondary-color, rgb(187, 11, 11), $primary-color);
+    background-clip: text;
+    color: transparent;
+    background-size: 2000px 2000px;
+    animation: company-name-ani 10s infinite linear;
 }
+
+/* keyframes for animation */
+
+@keyframes company-name-ani {
+    0%{
+        background-position: 0 0;
+    }   
+
+    25%{
+        background-position: 0 100%;
+    }
+
+    50%{
+        background-position: 100% 100%;
+    }   
+
+    100%{
+        background-position: 0 0;
+    }
+}
+
 
 /* Responsiveness */
 
