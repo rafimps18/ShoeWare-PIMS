@@ -32,7 +32,7 @@ body {
   margin-top: 0px;
   margin-bottom: 30px;
 }
-.login-header h1 {
+.login-header h1:not(.formh1) {
   font-size: 40px;
   margin-bottom: 10px;
 }
@@ -69,17 +69,17 @@ body {
   background-color: #eee;
 }
 
-.form-item label:not(.checkboxLabel) {
+.form-item label:not(.checkboxLabel, .pformLabel) {
   display: inline-block;
   background-color: white;
   margin-bottom: 10px;
   position: absolute;
-  padding: 0 10px;
+  padding: 0 5px;
   transform: translate(30px, -10px);
   font-size: 14px;
 }
 
-input[type=text],
+input[type=text]:not(.pformInput),
 input[type=password] {
   border: 1px solid black;
   height: 55px;
@@ -103,7 +103,7 @@ input[type=checkbox] {
   accent-color: #000000;
 }
 
-button {
+button:not(.pformSubmit) {
   border: none;
   background: linear-gradient(45deg, #000000, #535353);
   color: white;
@@ -188,4 +188,78 @@ h1.company-name {
   .login-right {
     display: none;
   }
+  .sidenav {
+    display: none;
+  }
+}
+/* navbar.php styling */
+.sidenav {
+  height: 100%;
+  width: 270px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background: linear-gradient(90deg, rgb(34, 34, 34), #101010);
+  overflow-x: hidden;
+}
+
+.sidenav-content {
+  margin-top: 75px;
+}
+
+.sidenav a {
+  background: linear-gradient(90deg, rgb(22, 22, 22), #101010);
+  color: white;
+  padding: 20px;
+  margin: 10px 5px;
+  text-decoration: none;
+  display: block;
+  border: solid white 1px;
+  border-radius: 15px;
+  font-size: 22px;
+}
+
+.sidenav a:hover {
+  background: linear-gradient(90deg, rgb(255, 255, 255), #bdbdbd);
+  color: black;
+}
+
+h1.company-name-navbar {
+  font-family: "Righteous", cursive;
+  font-size: 40px;
+  color: white;
+  margin-left: 40px;
+}
+
+#navbar-logo {
+  width: 200px;
+  height: 200px;
+  margin: 30px 30px 5px 30px;
+  border: white solid 1px;
+  border-radius: 10%;
+}
+
+/* form.php styling */
+.form-container {
+  margin-left: 270px;
+  min-height: calc(100vh - 80px);
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #eee;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.form-header {
+  margin: 0;
+}
+.form-header h1 {
+  font-size: 40px;
+}
+
+.product-information-form {
+  margin-top: 0px;
+  margin: auto;
+  width: 450px;
 }/*# sourceMappingURL=style.css.map */

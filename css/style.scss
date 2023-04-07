@@ -1,215 +1,299 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Righteous&display=swap");
 
 $primary-color: #000000;
 $secondary-color: #535353;
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-    padding: 0;
-    margin: 0;
-    font-family: 'Inter', sans-serif;
-    background: linear-gradient(45deg, $primary-color, $secondary-color);
-    padding: 40px;
+  padding: 0;
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  background: linear-gradient(45deg, $primary-color, $secondary-color);
+  padding: 40px;
 }
 
 .container {
-    min-height: calc(100vh - 40px * 2);
-    display: grid;
-    grid-template-columns: 50% 50%;
-    border-radius: 10px;
-    overflow: hidden;
+  min-height: calc(100vh - 40px * 2);
+  display: grid;
+  grid-template-columns: 50% 50%;
+  border-radius: 10px;
+  overflow: hidden;
 }
 
 .login-left {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding-left: 105px;
-    background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 105px;
+  background-color: white;
 }
 
 .login-header {
-    margin-top: 0px;
-    margin-bottom: 30px;
-    h1 {
-        font-size: 40px;
-        margin-bottom: 10px;
-    }
+  margin-top: 0px;
+  margin-bottom: 30px;
+  h1:not(.formh1) {
+    font-size: 40px;
+    margin-bottom: 10px;
+  }
 
-    p {
-        font-size: 30px;
-        opacity: .90;
-    }
+  p {
+    font-size: 30px;
+    opacity: 0.9;
+  }
 }
 
 .login-form {
-    width: 450px;
+  width: 450px;
 
-    &-content {
-        display: flex;
-        flex-direction: column;
-        gap: 35px;
+  &-content {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+  }
+
+  &-footer {
+    display: flex;
+    gap: 30px;
+    margin-top: 70px;
+
+    a {
+      flex: 6;
+      border: 1px solid black;
+      border-radius: 100px;
+      padding: 0.6rem;
+      justify-content: center;
+      display: flex;
+      align-items: center;
+      color: black;
+      text-decoration: none;
     }
 
-    &-footer {
-        display: flex;
-        gap: 30px;
-        margin-top: 70px;
-
-        a {
-            flex: 6;
-            border: 1px solid black;
-            border-radius: 100px;
-            padding: .6rem;
-            justify-content: center;
-            display: flex;
-            align-items: center;
-            color: black;
-            text-decoration: none;
-        }
-
-        &:hover {
-            background-color: #eee;
-
-        }
+    &:hover {
+      background-color: #eee;
     }
+  }
 }
 
-.form-item label:not(.checkboxLabel) {
-    display: inline-block;
-    background-color: white;
-    margin-bottom: 10px;
-    position: absolute;
-    padding: 0 10px;
-    transform: translate(30px, -10px);
-    font-size: 14px;
+.form-item label:not(.checkboxLabel, .pformLabel) {
+  display: inline-block;
+  background-color: white;
+  margin-bottom: 10px;
+  position: absolute;
+  padding: 0 5px;
+  transform: translate(30px, -10px);
+  font-size: 14px;
 }
 
-input[type='text'],
-input[type='password'] {
-    border: 1px solid black;
-    height: 55px;
-    padding: 0 2rem;
-    width: 100%;
-    outline: none;
-    transition: background .5s;
-    font-size: 18px;
-    border-radius: 100px;
+input[type="text"]:not(.pformInput),
+input[type="password"] {
+  border: 1px solid black;
+  height: 55px;
+  padding: 0 2rem;
+  width: 100%;
+  outline: none;
+  transition: background 0.5s;
+  font-size: 18px;
+  border-radius: 100px;
 }
 
 .checkbox {
-    display: flex;
-    align-items: center;
-    gap: 7px;
+  display: flex;
+  align-items: center;
+  gap: 7px;
 }
 
-input[type='checkbox'] {
-    width: 20px;
-    height: 20px;
-    accent-color: $primary-color;
+input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  accent-color: $primary-color;
 }
 
-button {
-    border: none;
-    background: linear-gradient(45deg, $primary-color, $secondary-color);
-    color:white;
-    padding: 1rem;
-    border-radius: 100px;
-    text-align: center;
-    text-transform: uppercase;
-    font-size: 18px;
-    height: 55px;
-    cursor: pointer;
+button:not(.pformSubmit) {
+  border: none;
+  background: linear-gradient(45deg, $primary-color, $secondary-color);
+  color: white;
+  padding: 1rem;
+  border-radius: 100px;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 18px;
+  height: 55px;
+  cursor: pointer;
 }
 
 /* Right Side*/
 
 .login-right {
-    background-color: #eee;
-    display: flex;
-    justify-content: center;
+  background-color: #eee;
+  display: flex;
+  justify-content: center;
 }
 
-.company-logo-and-name{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 80vh;
+.company-logo-and-name {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
 }
 
 $img-size: 150px;
 
 img {
-    margin:20px;
-    display: block;
-    width: $img-size;
-    height: $img-size;
-    border-radius: 10px;
+  margin: 20px;
+  display: block;
+  width: $img-size;
+  height: $img-size;
+  border-radius: 10px;
 }
 
-h1.company-name{
-    font-family: 'Righteous', cursive;
-    font-size: 60px;
-    background: conic-gradient($primary-color, $secondary-color, rgb(187, 11, 11), $primary-color);
-    background-clip: text;
-    color: transparent;
-    background-size: 2000px 2000px;
-    animation: company-name-ani 10s infinite linear;
+h1.company-name {
+  font-family: "Righteous", cursive;
+  font-size: 60px;
+  background: conic-gradient(
+    $primary-color,
+    $secondary-color,
+    rgb(187, 11, 11),
+    $primary-color
+  );
+  background-clip: text;
+  color: transparent;
+  background-size: 2000px 2000px;
+  animation: company-name-ani 10s infinite linear;
 }
 
 /* keyframes for animation */
 
 @keyframes company-name-ani {
-    0%{
-        background-position: 0 0;
-    }   
+  0% {
+    background-position: 0 0;
+  }
 
-    25%{
-        background-position: 0 100%;
-    }
+  25% {
+    background-position: 0 100%;
+  }
 
-    50%{
-        background-position: 100% 100%;
-    }   
+  50% {
+    background-position: 100% 100%;
+  }
 
-    100%{
-        background-position: 0 0;
-    }
+  100% {
+    background-position: 0 0;
+  }
 }
-
 
 /* Responsiveness */
 
-@media (max-width:1350px) {
-    .login-left {
-        padding: 50px !important;
-    }
+@media (max-width: 1350px) {
+  .login-left {
+    padding: 50px !important;
+  }
 
-    .login-form {
-        width: 100%;
-        
-        &-footer {
-            flex-direction: column;
-            gap: 15px;
-        }
+  .login-form {
+    width: 100%;
+
+    &-footer {
+      flex-direction: column;
+      gap: 15px;
     }
+  }
 }
-@media (max-width:768px) {
-    body {
-        padding: 20px;
-    }
+@media (max-width: 768px) {
+  body {
+    padding: 20px;
+  }
 
-    .container {
-        grid-template-columns: auto;
-    }
+  .container {
+    grid-template-columns: auto;
+  }
 
-    .login-right {
-        display: none;
-    }
+  .login-right {
+    display: none;
+  }
+
+  .sidenav{
+    display: none;
+  }
+
+}
+
+/* navbar.php styling */
+
+$logosize: 200px;
+
+.sidenav {
+  height: 100%;
+  width: 270px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background: linear-gradient(90deg, rgb(34, 34, 34), #101010);
+  overflow-x: hidden;
+}
+
+.sidenav-content {
+  margin-top: 75px;
+}
+
+.sidenav a {
+  background: linear-gradient(90deg, rgb(22, 22, 22), #101010);
+  color: white;
+  padding: 20px;
+  margin: 10px 5px;
+  text-decoration: none;
+  display: block;
+  border: solid white 1px;
+  border-radius: 15px;
+  font-size: 22px;
+}
+
+.sidenav a:hover {
+  background: linear-gradient(90deg, rgb(255, 255, 255), #bdbdbd);
+  color: black;
+}
+
+h1.company-name-navbar {
+  font-family: "Righteous", cursive;
+  font-size: 40px;
+  color: white;
+  margin-left: 40px;
+}
+
+#navbar-logo {
+  width: $logosize;
+  height: $logosize;
+  margin: 30px 30px 5px 30px;
+  border: white solid 1px;
+  border-radius: 10%;
+}
+
+/* form.php styling */
+
+.form-container {
+    margin-left: 270px;
+
+  min-height: calc(100vh - 40px * 2);
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #eee;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.form-header {
+    margin:0;
+  h1 {
+    font-size: 40px;
+  }
+}
+
+.product-information-form {
+    margin-top: 0px;
+    margin: auto;
+    width: 450px;
 }
