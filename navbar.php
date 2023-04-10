@@ -16,7 +16,7 @@
             <img id="navbar-logo" src="images/logo.png">
             <h1 class="company-name-navbar">ShoeWare</h1>
             <div class="navbar-links">
-                <a href="index.php">Enter a product</a>
+                <a href="form.php">Enter a product</a>
                 <a href="database.php">Product list</a>
                 <a href="account-settings.php">Account settings</a>
             </div>

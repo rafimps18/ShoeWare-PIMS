@@ -40,7 +40,7 @@
         </div>
         <div class="login-right">
             <div class="company-logo-and-name">
-                <img src=".\images\logo.png" alt="">
+                <img class="company-logo" src=".\images\logo.png" alt="">
                 <h1 class="company-name">ShoeWare</h1>
             </div>
         </div>

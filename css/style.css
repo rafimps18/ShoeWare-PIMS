@@ -1,14 +1,16 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Righteous&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
 * {
   box-sizing: border-box;
 }
 
 body {
+  font-size: 100%;
+  color: #1d1d1f;
   padding: 0;
   margin: 0;
-  font-family: "Helvetica", sans-serif;
-  background: linear-gradient(45deg, #000000, #535353);
+  font-family: "Inter", Arial, Helvetica, sans-serif;
+  background: linear-gradient(45deg, #1d1d1f, #535353);
   padding: 40px;
 }
 
@@ -81,6 +83,7 @@ body {
 
 input[type=text]:not(.pformInput),
 input[type=password] {
+  background-color: #fff;
   border: 1px solid black;
   height: 55px;
   padding: 0 2rem;
@@ -100,17 +103,16 @@ input[type=password] {
 input[type=checkbox] {
   width: 20px;
   height: 20px;
-  accent-color: #000000;
+  accent-color: #1d1d1f;
 }
 
 button:not(.pformSubmit) {
   border: none;
-  background: linear-gradient(45deg, #000000, #535353);
+  background: linear-gradient(45deg, #1d1d1f, #535353);
   color: white;
   padding: 1rem;
   border-radius: 100px;
   text-align: center;
-  text-transform: uppercase;
   font-size: 18px;
   height: 55px;
   cursor: pointer;
@@ -136,7 +138,7 @@ ul {
   height: 80vh;
 }
 
-img {
+img.company-logo {
   margin: 20px;
   display: block;
   width: 150px;
@@ -147,7 +149,7 @@ img {
 h1.company-name {
   font-family: "Righteous", cursive;
   font-size: 60px;
-  background: conic-gradient(#000000, #535353, rgb(187, 11, 11), #000000);
+  background: conic-gradient(#1d1d1f, #535353, rgb(187, 11, 11), #1d1d1f);
   -webkit-background-clip: text;
           background-clip: text;
   color: transparent;
@@ -216,6 +218,16 @@ h1.company-name {
   .company-name-navbar {
     display: none;
   }
+  input[type=text], input[type=number].pformInput {
+    width: 80%;
+  }
+  .pformSubmit {
+    width: 80%;
+  }
+  .formh1 {
+    display: inline;
+    overflow: hidden;
+  }
 }
 /* navbar.php styling */
 nav {
@@ -255,10 +267,12 @@ nav a {
   display: block;
   border-radius: 50px;
   font-size: 22px;
+  font-weight: bold;
   width: 100%;
 }
 
 nav a:hover {
+  font-weight: bolder;
   background: linear-gradient(90deg, rgb(230, 230, 230), #bdbdbd);
   color: black;
 }
@@ -284,7 +298,7 @@ h1.company-name-navbar {
   top: 0;
   width: 80%;
   height: 100%;
-  background-color: #f1f1f1;
+  background: linear-gradient(45deg, #1d1d1f, #535353);
   z-index: 0;
 }
 
@@ -296,7 +310,7 @@ h1.company-name-navbar {
   height: 80%;
   margin: 2rem;
   padding: 2rem;
-  background-color: #e6e6e6;
+  background-color: #f9f9ff;
   border-radius: 20px;
   min-height: calc(100vh - 80px);
 }
@@ -305,11 +319,8 @@ h1.company-name-navbar {
   margin: auto;
   width: 500px;
 }
-.form-header h1 {
-  font-size: 40px;
-}
-
-.formh1 {
+.form-header .formh1 {
+  font-size: 2.25em;
   margin: 10px 0px 10px 0px;
 }
 
@@ -323,42 +334,162 @@ h1.company-name-navbar {
 
 .pform-item {
   margin-bottom: 15px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .pformLabel {
   font-size: 23px;
   font-weight: bold;
-  margin-bottom: 20px;
-  opacity: 0.8;
+  margin-bottom: 2px;
+  opacity: 0.95;
+  display: block;
 }
 
 .pformInput {
   border: 1px solid black;
-  background-color: #f1f1f1;
-  height: 30px;
-  padding: 0 1rem;
+  background-color: rgb(235, 237, 255);
+  height: 32px;
+  padding: 3px 1rem;
   width: 100%;
   outline: none;
   transition: background 0.5s;
   font-size: 18px;
-  border-radius: 100px;
-  margin-top: 10px;
+  border-radius: 50px;
 }
 
 .pformSubmit {
   border: none;
-  background: linear-gradient(45deg, #000000, #535353);
+  margin-top: 10px;
+  background: linear-gradient(45deg, #1d1d1f, #535353);
   color: white;
   padding: 1rem;
   border-radius: 100px;
   text-align: center;
-  text-transform: uppercase;
-  font-size: 18px;
+  font-size: 23px;
+  font-weight: bold;
   height: 55px;
   cursor: pointer;
+}
+
+.pformSubmit:hover {
+  font-weight: bolder;
+  background: linear-gradient(90deg, rgb(230, 230, 230), #a5a5a5);
+  color: black;
 }
 
 .information-form-content {
   display: flex;
   flex-direction: column;
+}
+
+/* database page styling */
+.table-header-and-search {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem;
+  padding: 1.125rem;
+  background-color: #f9f9ff;
+  border-radius: 20px;
+  min-height: calc(20vh - 80px);
+}
+
+.table-header {
+  color: #1d1d1f;
+  margin: auto;
+}
+.table-header .tableh1 {
+  font-size: 2.25em;
+  margin: 10px 0px 10px 0px;
+}
+
+.table {
+  margin: 20px;
+}
+
+#products {
+  text-align: center;
+  border: none;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#products td,
+#products th {
+  text-align: center;
+  border: 1px solid #e2e2e2;
+  padding: 15px;
+  background-color: #f5f5f7;
+}
+
+#products th {
+  font-size: 20px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  background: linear-gradient(90deg, #1d1d1f, rgb(54, 54, 54));
+  color: #f5f5f7;
+}
+
+.search-btn-and-input {
+  display: flex;
+  flex-direction: column;
+  margin-top: 0px;
+  margin: auto;
+  width: 100%;
+}
+
+.search-button {
+  border: none;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background: linear-gradient(45deg, #1d1d1f, #535353);
+  color: white;
+  padding: 1rem;
+  border-radius: 100px;
+  text-align: center;
+  font-size: 23px;
+  font-weight: bold;
+  height: 55px;
+  cursor: pointer;
+}
+
+.search-button:hover {
+  font-weight: bolder;
+  background: linear-gradient(90deg, rgb(230, 230, 230), #a5a5a5);
+  color: black;
+}
+
+.edit {
+  text-decoration: none;
+  background-color: rgb(76, 76, 247);
+  border: 1px solid black;
+  padding: 10px;
+  color: #f5f5f7;
+  border-radius: 15px;
+  margin: 5px;
+  font-weight: bold;
+}
+
+.edit:hover {
+  background-color: rgb(107, 107, 255);
+  font-weight: bold;
+}
+
+.delete {
+  text-decoration: none;
+  background-color: rgb(223, 52, 52);
+  border: 1px solid black;
+  padding: 10px;
+  color: #f5f5f7;
+  border-radius: 15px;
+  margin: 5px;
+  font-weight: bold;
+}
+
+.delete:hover {
+  background-color: rgb(224, 91, 91);
+  font-weight: bold;
 }/*# sourceMappingURL=style.css.map */
