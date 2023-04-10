@@ -116,6 +116,10 @@ button:not(.pformSubmit) {
   cursor: pointer;
 }
 
+li, ul {
+  text-decoration: none;
+}
+
 /* Right Side*/
 .login-right {
   background-color: #eee;
@@ -188,47 +192,63 @@ h1.company-name {
   .login-right {
     display: none;
   }
-  .sidenav {
-    display: none;
-  }
 }
 /* navbar.php styling */
-.sidenav {
+nav {
+  position: fixed;
+  left: 0;
+  top: 0;
   height: 100%;
-  width: 270px;
+  width: 20%;
   position: fixed;
   z-index: 1;
-  top: 0;
-  left: 0;
-  background: linear-gradient(90deg, rgb(34, 34, 34), #101010);
+  background: linear-gradient(90deg, rgb(39, 39, 39), #101011);
   overflow-x: hidden;
+  transition: all 0.3s ease-in-out;
 }
 
-.sidenav-content {
-  margin-top: 75px;
+.sidenav-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
 }
 
-.sidenav a {
-  background: linear-gradient(90deg, rgb(22, 22, 22), #101010);
+.navbar-links {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+nav a {
+  background: linear-gradient(90deg, rgb(32, 32, 32), #1d1d1f);
   color: white;
   padding: 20px;
-  margin: 10px 5px;
+  margin: 10px 10px;
   text-decoration: none;
   display: block;
-  border: solid white 1px;
-  border-radius: 15px;
+  border-radius: 50px;
   font-size: 22px;
+  width: 100%;
 }
 
-.sidenav a:hover {
-  background: linear-gradient(90deg, rgb(255, 255, 255), #bdbdbd);
+.plusIcon {
+  width: 30px;
+  height: 30px;
+  margin: 0px 10px 0px 0px;
+}
+
+nav a:hover {
+  background: linear-gradient(90deg, rgb(230, 230, 230), #bdbdbd);
   color: black;
 }
 
 h1.company-name-navbar {
   font-family: "Righteous", cursive;
   font-size: 40px;
-  color: white;
+  color: #f5f5f7;
   margin-left: 40px;
 }
 
@@ -242,24 +262,73 @@ h1.company-name-navbar {
 
 /* form.php styling */
 .form-container {
-  margin-left: 270px;
   min-height: calc(100vh - 80px);
   border-radius: 10px;
   overflow: hidden;
-  background-color: #eee;
+  background-color: #e6e6e6;
   flex-direction: column;
   justify-content: center;
+  padding: 20px;
 }
 
 .form-header {
-  margin: 0;
+  margin: auto;
+  width: 500px;
 }
 .form-header h1 {
   font-size: 40px;
 }
 
+.formh1 {
+  margin: 10px 0px 10px 0px;
+}
+
 .product-information-form {
+  display: flex;
+  flex-direction: column;
   margin-top: 0px;
   margin: auto;
-  width: 450px;
+  width: 500px;
+}
+
+.pform-item {
+  margin-bottom: 15px;
+}
+
+.pformLabel {
+  font-size: 23px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  opacity: 0.8;
+}
+
+.pformInput {
+  border: 1px solid black;
+  background-color: #f1f1f1;
+  height: 30px;
+  padding: 0 1rem;
+  width: 100%;
+  outline: none;
+  transition: background 0.5s;
+  font-size: 18px;
+  border-radius: 100px;
+  margin-top: 10px;
+}
+
+.pformSubmit {
+  border: none;
+  background: linear-gradient(45deg, #000000, #535353);
+  color: white;
+  padding: 1rem;
+  border-radius: 100px;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 18px;
+  height: 55px;
+  cursor: pointer;
+}
+
+.information-form-content {
+  display: flex;
+  flex-direction: column;
 }/*# sourceMappingURL=style.css.map */
