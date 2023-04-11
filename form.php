@@ -20,32 +20,37 @@ require_once 'navbar.php';
 
 <body>
     <div class="content-container">
+    <div class="form-popup" id="popup">
+      <h1>Success!</h1>
+      <p>Product information inserted successfully!</p>
+    </div>
         <div class="form-container">
             <div class="form-header">
                 <h1 class="formh1">Product Information Form</h1>
+        
             </div>
             <form class="product-information-form" action="form.php" method="post">
                 <div class="information-form-content">
                     <div class="pform-item">
                         <label class="pformLabel" for="pname">Product Name</label>
-                        <input class="pformInput" type="text" placeholder="Enter product name" name="pname">
+                        <input class="pformInput" type="text" placeholder="Enter product name" name="pname" required>
                     </div>
                     <div class="pform-item">
                         <label class="pformLabel" for="pbrand">Product Brand</label>
-                        <input class="pformInput" type="text" placeholder="Enter product brand" name="pbrand">
+                        <input class="pformInput" type="text" placeholder="Enter product brand" name="pbrand" required>
                     </div>
                     <div class="pform-item">
                         <label class="pformLabel" for="pcolor">Color</label>
-                        <input class="pformInput" type="text" placeholder="Enter color" name="pcolor">
+                        <input class="pformInput" type="text" placeholder="Enter color" name="pcolor" required>
                     </div>
                     <div class="pform-item">
                         <label class="pformLabel" for="price">Price</label>
-                        <input class="pformInput" type="number" placeholder="Enter product price" name="price">
+                        <input class="pformInput" type="number" placeholder="Enter product price" name="price" required>
 
                     </div>
                     <div class="pform-item">
                         <label class="pformLabel" for="pquantity">Product Quantity</label>
-                        <input class="pformInput" type="number" placeholder="Enter product quantity" name="pquantity">
+                        <input class="pformInput" type="number" placeholder="Enter product quantity" name="pquantity" required>
                     </div>
                     <button class="pformSubmit" type="submit" name="submit-btn">Submit</button>
                 </div>

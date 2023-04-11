@@ -280,7 +280,7 @@ nav {
   height: 100%;
   width: 20%;
   position: fixed;
-  z-index: 1;
+  z-index: 2;
   background: linear-gradient(90deg, rgb(39, 39, 39), #101011);
   overflow-x: hidden;
   transition: all 0.3s ease-in-out;
@@ -357,6 +357,8 @@ h1.company-name-navbar {
   background-color: #f9f9ff;
   border-radius: 20px;
   min-height: calc(100vh - 40px * 2);
+  z-index: 1;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 .form-header {
@@ -427,6 +429,22 @@ h1.company-name-navbar {
   flex-direction: column;
 }
 
+#popup {
+  position: fixed;
+  border-radius: 15px;
+  top: 48%;
+  left: 58%;
+  transform: translate(-50%, -50%);
+  padding: 25px 40px;
+  background-color: #ffffff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  z-index: 2;
+}
+
+#popup h1{
+  text-align: center;
+}
+
 /* database page styling */
 
 .table-header-and-search {
@@ -461,12 +479,19 @@ h1.company-name-navbar {
   width: 100%;
 }
 
-#products td,
+#products td {
+  padding: 15px;
+}
+
+#products tr,
 #products th {
   text-align: center;
   border: 1px solid #e2e2e2;
-  padding: 15px;
   background-color: #f5f5f7;
+}
+
+#products tr:hover{
+  background-color: #cccccc;
 }
 
 #products th {
