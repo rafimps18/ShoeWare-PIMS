@@ -386,6 +386,7 @@ h1.company-name-navbar {
 }
 
 #popup {
+  visibility: hidden;
   position: fixed;
   border-radius: 15px;
   top: 48%;
@@ -441,7 +442,7 @@ h1.company-name-navbar {
 #products tr,
 #products th {
   text-align: center;
-  border: 1px solid #e2e2e2;
+  border: 1px solid #929292;
   background-color: #f5f5f7;
 }
 
@@ -517,4 +518,25 @@ h1.company-name-navbar {
 .delete:hover {
   background-color: rgb(224, 91, 91);
   font-weight: bold;
+}
+
+/* edit.php styling*/
+.back, .editFormSubmit {
+  text-decoration: none;
+  border: none;
+  margin-top: 10px;
+  background: linear-gradient(45deg, #1d1d1f, #535353);
+  color: white;
+  padding: 1rem;
+  border-radius: 100px;
+  text-align: center;
+  font-size: 20px;
+  height: 55px;
+  cursor: pointer;
+}
+
+.back:hover, .editFormSubmit:hover {
+  font-weight: bolder;
+  background: linear-gradient(90deg, rgb(230, 230, 230), #a5a5a5);
+  color: black;
 }/*# sourceMappingURL=style.css.map */

@@ -25,55 +25,55 @@ include_once 'navbar.php';
                     <input type="submit" name="submit" value="Search" class="search-button">
                 </div>
             </form>
-            <?php
-            echo "<div class='center'>";
-            echo "<table id='products'><th>Product Id</th><th>Product Name</th><th>Brand</th><th>Color</th><th>Price</th><th>Quantity</th><th>Actions</th>";
-            // Get search term from form submission
-            $search = $_GET['search'];
-
-            // Perform search query
-            $sql = "SELECT * FROM products2 WHERE pname LIKE '$search' OR pbrand LIKE '$search' OR pcolor LIKE '$search' OR price LIKE '$search' OR pquantity LIKE '$search'";
-            $result = $con->query($sql);
-
-            // Display search results
-            if ($result->num_rows > 0) {
-                while ($row = mysqli_fetch_array($result)) {
-                    ?>
-                    <tr>
-                        <td>
-                            <?php echo $row['pid'] ?>
-                        </td>
-                        <td>
-                            <?php echo $row['pname'] ?>
-                        </td>
-                        <td>
-                            <?php echo $row['pbrand'] ?>
-                        </td>
-                        <td>
-                            <?php echo $row['pcolor'] ?>
-                        </td>
-                        <td>
-                            <?php echo $row['price'] ?>
-                        </td>
-                        <td>
-                            <?php echo $row['pquantity'] ?>
-                        </td>
-                        <td>
-                            <a href="edit-form.php?pid=<?php echo $row['pid']; ?>">Edit</a>
-                            <a href="includes\delete-inc.php?pid=<?php echo $row['pid']; ?>">Delete</a>
-                        </td>
-                    </tr>
-                    <?php
-
-                }
-            } else {
-                echo "No results found.";
-            }
-
-            // Close database connection
-            $con->close();
-            ?>
         </div>
+        <?php
+        echo "<div class='table'>";
+        echo "<table id='products'><th>Product Id</th><th>Product Name</th><th>Brand</th><th>Color</th><th>Price</th><th>Quantity</th><th>Actions</th>";
+        // Get search term from form submission
+        $search = $_GET['search'];
+
+        // Perform search query
+        $sql = "SELECT * FROM products2 WHERE pname LIKE '$search' OR pbrand LIKE '$search' OR pcolor LIKE '$search' OR price LIKE '$search' OR pquantity LIKE '$search'";
+        $result = $con->query($sql);
+
+        // Display search results
+        if ($result->num_rows > 0) {
+            while ($row = mysqli_fetch_array($result)) {
+                ?>
+                <tr>
+                    <td>
+                        <?php echo $row['pid'] ?>
+                    </td>
+                    <td>
+                        <?php echo $row['pname'] ?>
+                    </td>
+                    <td>
+                        <?php echo $row['pbrand'] ?>
+                    </td>
+                    <td>
+                        <?php echo $row['pcolor'] ?>
+                    </td>
+                    <td>
+                        <?php echo $row['price'] ?>
+                    </td>
+                    <td>
+                        <?php echo $row['pquantity'] ?>
+                    </td>
+                    <td>
+                        <a class="edit" href="edit-form.php?pid=<?php echo $row['pid']; ?>">Edit</a>
+                        <a class="delete" href="includes\delete-inc.php?pid=<?php echo $row['pid']; ?>">Delete</a>
+                    </td>
+                </tr>
+                <?php
+
+            }
+        } else {
+            echo "No results found.";
+        }
+
+        // Close database connection
+        $con->close();
+        ?>
     </div>
 </body>
 

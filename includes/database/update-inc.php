@@ -1,5 +1,5 @@
 <?php
-require 'dbconfig\config.php';
+require '..\..\dbconfig\config.php';
 $pid = $_GET['pid'];
 
 $pname = $_POST['pname'];
