@@ -14,7 +14,15 @@ require_once 'navbar.php';
 
 <body>
     <div class="content-container">
-        
+        <div class="account-settings-container">
+
+                <h1>Account Settings</h1>
+                <h2>Username</h2>
+                <a href="#">Sign out</a>
+                <a href="#">Change Username</a>
+                <a href="#">Delete Account</a>
+
+        </div>
     </div>
 </body>
 

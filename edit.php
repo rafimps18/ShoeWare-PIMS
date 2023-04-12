@@ -37,7 +37,9 @@ include_once 'navbar.php';
                     </div>
                     <div class="pform-item">
                         <label class="pformLabel" for="pquantity">Product Quantity</label>
+
                         <input class="pformInput" type="text" value="<?php echo $row['pquantity']; ?>" name="pquantity">
+
                     </div>
 
                     <center>

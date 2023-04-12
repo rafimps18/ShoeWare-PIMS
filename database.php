@@ -69,6 +69,8 @@ include_once 'navbar.php';
             </tr>
             <?php
         }
+        echo '</table>';
+        echo '</div>';
         ?>
     </div>
 </body>
