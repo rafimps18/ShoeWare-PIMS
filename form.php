@@ -63,7 +63,7 @@ require_once 'navbar.php';
                 $price = $_POST['price'];
                 $pquantity = $_POST['pquantity'];
 
-                $query = "insert into products2 values(NULL, '$pname', '$pbrand', '$pcolor', $price ,$pquantity)";
+                $query = "insert into products2 values(NULL, '$pname', '$pbrand', '$pcolor', $price ,$pquantity, CURRENT_TIMESTAMP)";
                 $query_run = mysqli_query($con, $query);
 
                 if ($query_run) {

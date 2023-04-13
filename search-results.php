@@ -60,8 +60,10 @@ include_once 'navbar.php';
                         <?php echo $row['pquantity'] ?>
                     </td>
                     <td>
-                        <a class="edit" href="edit-form.php?pid=<?php echo $row['pid']; ?>">Edit</a>
-                        <a class="delete" href="includes\delete-inc.php?pid=<?php echo $row['pid']; ?>">Delete</a>
+                        <div class="actions-cell">
+                            <a class="edit" href="edit.php?pid=<?php echo $row['pid']; ?>">Edit</a>
+                            <a class="delete" href="includes\database\delete-inc.php?pid=<?php echo $row['pid']; ?>">Delete</a>
+                        </div>
                     </td>
                 </tr>
                 <?php

@@ -437,7 +437,7 @@ h1.company-name-navbar {
 }
 
 #products td {
-  padding: 15px;
+  padding: 10px;
   border: 1px solid #929292;
 }
 
@@ -497,7 +497,7 @@ h1.company-name-navbar {
   padding: 10px;
   color: #f5f5f7;
   border-radius: 100px;
-  margin: 5px;
+  margin: 2px 5px;
 }
 
 .edit:hover {
@@ -510,11 +510,16 @@ h1.company-name-navbar {
   padding: 10px;
   color: #f5f5f7;
   border-radius: 100px;
-  margin: 5px;
+  margin: 3px 5px 2px 5px;
 }
 
 .delete:hover {
   background-color: rgb(182, 53, 53);
+}
+
+.actions-cell {
+  display: flex;
+  flex-direction: column;
 }
 
 /* edit.php styling*/
@@ -572,19 +577,4 @@ h1.company-name-navbar {
 .account-settings-container a:hover {
   background: linear-gradient(90deg, rgb(230, 230, 230), #bdbdbd);
   color: black;
-}
-
-/*
-
-h1.company-name-navbar {
-  font-family: "Righteous", cursive;
-  font-size: 40px;
-  color: #f5f5f7;
-}
-
-#navbar-logo {
-  width: $logosize;
-  height: $logosize;
-  margin: 30px 30px 5px 30px;
-  border: white solid 1px;
-  border-radius: 10%;*//*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */

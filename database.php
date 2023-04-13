@@ -40,7 +40,7 @@ include_once 'navbar.php';
         }
         $result = mysqli_query($con, "SELECT * FROM products2");
         echo "<div class='table'>";
-        echo "<table id='products'><th>Product Id</th><th>Product Name</th><th>Brand</th><th>Color</th><th>Price</th><th>Quantity</th><th>Actions</th>";
+        echo "<table id='products'><th>Product Id</th><th>Product Name</th><th>Brand</th><th>Color</th><th>Price</th><th>Quantity</th><th>Date Added</th><th>Actions</th>";
         while ($row = mysqli_fetch_array($result)) {
             ?>
             <tr>
@@ -63,8 +63,13 @@ include_once 'navbar.php';
                     <?php echo $row['pquantity'] ?>
                 </td>
                 <td>
-                    <a class="edit" href="edit.php?pid=<?php echo $row['pid']; ?>">Edit</a>
-                    <a class="delete" href="includes\database\delete-inc.php?pid=<?php echo $row['pid']; ?>">Delete</a>
+                    <?php echo $row['dateAdded'] ?>
+                </td>
+                <td class="actions-cell">
+                    <div class="actions-cell">
+                        <a class="edit" href="edit.php?pid=<?php echo $row['pid']; ?>">Edit</a>
+                        <a class="delete" href="includes\database\delete-inc.php?pid=<?php echo $row['pid']; ?>">Delete</a>
+                    </div>
                 </td>
             </tr>
             <?php
