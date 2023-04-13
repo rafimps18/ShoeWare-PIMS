@@ -18,9 +18,9 @@ require_once 'navbar.php';
 
                 <h1>Account Settings</h1>
                 <h2>Username</h2>
-                <a href="#">Sign out</a>
-                <a href="#">Change Username</a>
-                <a href="#">Delete Account</a>
+                <a href="includes\login\logout-inc.php">Sign out</a>
+                <a href="change-username.php">Change Username</a>
+                <a href="delete-account.php">Delete Account</a>
 
         </div>
     </div>
