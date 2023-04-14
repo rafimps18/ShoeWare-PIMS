@@ -17,7 +17,7 @@ include_once 'navbar.php';
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product Information Form</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css"> 
 </head>
 
 <body>
@@ -68,7 +68,7 @@ include_once 'navbar.php';
                 <td class="actions-cell">
                     <div class="actions-cell">
                         <a class="edit" href="edit.php?pid=<?php echo $row['pid']; ?>">Edit</a>
-                        <a class="delete" href="includes\database\delete-inc.php?pid=<?php echo $row['pid']; ?>">Delete</a>
+                        <a class="delete-btn" onclick="confirmDelete(<?php echo $row['pid']; ?>)">Delete</a>
                     </div>
                 </td>
             </tr>
@@ -78,6 +78,18 @@ include_once 'navbar.php';
         echo '</div>';
         ?>
     </div>
+    <!-- JavaScript function to show the confirmation dialog -->
+    <script>
+        function confirmDelete(pid) {
+            // Display the confirmation dialog with delete and cancel buttons
+            if (confirm("Are you sure you want to delete this data with ID: " + pid + "?")) {
+                // If delete button is clicked, execute the delete query
+                window.location.href="includes/database/delete-inc.php?pid=" + pid; // Replace with your PHP file and query
+            } else {
+                // If cancel button is clicked, do nothing
+            }
+        }
+    </script>
 </body>
 
 </html>
