@@ -1,5 +1,6 @@
 <?php
 include_once 'navbar.php';
+session_start();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -15,7 +16,7 @@ include_once 'navbar.php';
     <div class="content-container">
         <div class="form-container">
             <h1>Change username</h1>
-            <h2>Old username: Username</h2>
+            <h2>Old username: <?php echo $_SESSION["useruid"]?></h2>
             <div class="pformItem">
                 <label class="pformLabel" for="new-username">New username</label>
                 <input class="new-username-label" name="new-username" type="text">
