@@ -9,12 +9,13 @@ if (isset($_POST["submit"])) {
     require_once 'functions.inc.php';
 
     if (emptyInputLogin($username, $pwd) !== false) {
-        header("location: ../login.php?error=emptyinput");
+        header("location: ../../index.php?error=emptyinput");
         exit();
     }
 
     loginUser($conn, $username, $pwd);
 } else {
+    createUser($conn, 'generic', 'generic@email.com', 'generic', 'generic');
     header("location: ../../form.php");
     exit();
 }
