@@ -1,5 +1,5 @@
 <?php
-require 'dbconfig/config.php';
+require 'includes/login/dbh-inc.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">

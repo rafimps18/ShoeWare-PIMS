@@ -116,6 +116,7 @@ button:not(.pformSubmit) {
   font-size: 18px;
   height: 55px;
   cursor: pointer;
+  margin-bottom: 30px;
 }
 
 .login-error-message {
