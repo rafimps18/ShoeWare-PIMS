@@ -2,7 +2,7 @@
 
 function emptyInputSignup($name, $email, $username, $pwd, $pwdRepeat)
 {
-    $result;
+    $result = true;
     if (empty($name) || empty($email) || empty($username) || empty($pwd) || empty($pwdRepeat)) {
         $result = true;
     } else {
@@ -13,7 +13,7 @@ function emptyInputSignup($name, $email, $username, $pwd, $pwdRepeat)
 
 function invalidUid($username)
 {
-    $result;
+    $result = true;
     if (!preg_match("/^[a-zA-Z0-9]*$/", $username)) {
         $result = true;
     } else {
@@ -24,7 +24,7 @@ function invalidUid($username)
 
 function invalidEmail($email)
 {
-    $result;
+    $result = true;
     if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
         $result = true;
     } else {
@@ -35,7 +35,7 @@ function invalidEmail($email)
 
 function pwdMatch($pwd, $pwdRepeat)
 {
-    $result;
+    $result = true;
     if ($pwd !== $pwdRepeat) {
         $result = true;
     } else {
@@ -82,13 +82,13 @@ function createUser($conn, $name, $email, $username, $pwd)
     mysqli_stmt_bind_param($stmt, "ssss", $name, $email, $username, $hashedPwd);
     mysqli_stmt_execute($stmt);
     mysqli_stmt_close($stmt);
-    header("location: ../signup.php?error=none");
+    header("location: ../../sign-up.php?error=none");
     exit();
 }
 
 function emptyInputLogin($username, $pwd)
 {
-    $result;
+    $result = true;
     if (empty($username) || empty($pwd)) {
         $result = true;
     } else {

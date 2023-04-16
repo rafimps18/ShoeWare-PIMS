@@ -21,27 +21,27 @@ require 'dbconfig/config.php';
                 <p>Sign Up</p>
             </div>
 
-            <form class="login-form" action="" method="post">
+            <form class="login-form" action="includes\login\sign-up.inc.php" method="post">
                 <div class="login-form-content">
                     <div class="form-item">
                         <label for="username">Name</label>
-                        <input type="text" id="username" name="uid">
+                        <input type="text" id="username" name="name">
                     </div>
                     <div class="form-item">
                         <label for="password">Email</label>
-                        <input type="password" id="password" name="pwd">
+                        <input type="text" id="email" name="email">
                     </div>
                     <div class="form-item">
                         <label for="username">Username</label>
-                        <input type="text" id="username" name="uid">
+                        <input type="text" id="uid" name="uid">
                     </div>
                     <div class="form-item">
                         <label for="password">Password</label>
-                        <input type="password" id="password" name="pwd">
+                        <input type="password" id="pwd" name="pwd">
                     </div>
                     <div class="form-item">
                         <label for="password">Re-enter Password</label>
-                        <input type="password" id="password" name="pwd">
+                        <input type="password" id="pwdRepeat" name="pwdrepeat">
                     </div>
                     <button type="submit" name="submit">Sign Up</button>
                 </div>
