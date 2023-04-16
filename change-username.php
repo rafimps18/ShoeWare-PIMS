@@ -23,7 +23,7 @@ session_start();
             </div>
             <div class="yes-no">
                 <a class="delete" href="#">Save</a>
-                <a class="blue-btn" href="#">Cancel</a>
+                <a class="blue-btn" href="account-settings.php">Cancel</a>
             </div>
         </div>
     </div>

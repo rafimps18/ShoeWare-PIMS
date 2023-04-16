@@ -14,7 +14,17 @@ require 'dbconfig/config.php';
 </head>
 
 <body>
+    <div class="form-popup" id="signup-popup">
+        <h1>Sign up success!</h1>
+        <p>User successfully registered!</p>
+        <div class="yes-no">
+        <button class="signup-popup-button" onclick="closePopup()">Okay</button>
+        <a href="index.php">Go to login page</a>
+        </div>
+    </div>
     <div class="container">
+
+
         <div class="login-left">
             <div class="login-header">
                 <h1>Product Inventory Management System</h1>
@@ -54,6 +64,15 @@ require 'dbconfig/config.php';
             </div>
         </div>
     </div>
+    <script>
+        function showPopup() {
+            document.getElementById('signup-popup').style.visibility = 'visible';
+        }
+
+        function closePopup() {
+            document.getElementById('signup-popup').style.visibility = 'hidden';
+        }
+    </script>
 </body>
 
 </html>

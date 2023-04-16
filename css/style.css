@@ -109,7 +109,7 @@ input[type=checkbox] {
 button:not(.pformSubmit) {
   border: none;
   background: linear-gradient(45deg, #1d1d1f, #535353);
-  color: white;
+  color: #ffffff;
   padding: 1rem;
   border-radius: 100px;
   text-align: center;
@@ -630,4 +630,27 @@ h1.company-name-navbar {
   min-height: calc(100vh - 80px);
   z-index: 1;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+#signup-popup {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: fixed;
+  border-radius: 15px;
+  top: 48%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 30px 40px;
+  background-color: #ffffff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  z-index: 2;
+}
+#signup-popup h1 {
+  margin: 20px;
+  text-align: center;
+}
+#signup-popup p {
+  margin: 20px;
+  text-align: center;
 }/*# sourceMappingURL=style.css.map */
