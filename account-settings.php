@@ -1,5 +1,6 @@
 <?php
 require 'includes/login/dbh-inc.php';
+require 'includes/account-settings/get-username.php';
 require_once 'navbar.php';
 session_start();
 ?>
@@ -19,7 +20,7 @@ session_start();
         <div class="account-settings-container">
 
                 <h1>Account Settings</h1>
-                <h2><?php echo $_SESSION["useruid"]; ?></h2>
+                <h2><?php echo $username; ?></h2>
                 <a href="includes\login\logout-inc.php">Sign out</a>
                 <a href="change-username.php">Change Username</a>
                 <a href="delete-account.php">Delete Account</a>
