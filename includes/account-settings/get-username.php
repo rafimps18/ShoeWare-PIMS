@@ -11,7 +11,6 @@ if ($result->num_rows > 0) {
     // Output data of the first row (assuming ID is unique)
     $row = $result->fetch_assoc();
     $username = $row["usersUid"];
-    echo "Username: " . $username;
 } else {
     echo "No user found with the given ID";
 }
