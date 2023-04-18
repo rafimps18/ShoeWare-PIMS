@@ -1,5 +1,6 @@
 <?php
 include_once 'navbar.php';
+session_start();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -18,8 +19,8 @@ include_once 'navbar.php';
             <h1>Delete account</h1>
             <p>Are you sure you want to delete your account?</p>
             <div class="yes-no">
-                <a class="delete" href="#">Yes</a>
-                <a class="blue-btn" href="#">No</a>
+                <a class="delete" href="includes/account-settings/delete-account.inc.php?usersId=<?php echo $_SESSION["userid"] ; ?> ">Yes</a>
+                <a class="blue-btn" href="account-settings.php">No</a>
             </div>
 
         </div>
