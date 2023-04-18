@@ -72,7 +72,7 @@ body {
       justify-content: center;
       display: flex;
       align-items: center;
-      color: black;
+      color: red;
       text-decoration: none;
     }
 
@@ -412,8 +412,9 @@ h1.company-name-navbar {
 }
 
 .pformSubmit {
+  text-decoration: none;
   border: none;
-  margin-top: 10px;
+  margin-left: 10px;
   background: linear-gradient(45deg, $primary-color, $secondary-color);
   color: white;
   padding: 1rem;
@@ -440,7 +441,7 @@ h1.company-name-navbar {
   visibility: hidden;
   position: fixed;
   border-radius: 15px;
-  top: 48%;
+  top: 48%; 
   left: 58%;
   transform: translate(-50%, -50%);
   padding: 25px 40px;
@@ -660,6 +661,20 @@ h1.company-name-navbar {
   background-color: rgb(69, 69, 255);
 }
 
+.back-btn {
+  text-decoration: none;
+  border: none;
+  background: linear-gradient(45deg, $primary-color, $secondary-color);
+  color: #ffffff;
+  padding: 1rem;
+  border-radius: 100px;
+  text-align: center;
+  font-size: 18px;
+  height: 55px;
+  cursor: pointer;
+  margin-bottom: 30px;
+}
+
 /* sign-up page styling */
 
 .sign-up-content-container {
@@ -688,8 +703,7 @@ h1.company-name-navbar {
 }
 
 #signup-popup {
-  visibility: hidden;
-  display: flex;
+  display:block;
   flex-direction: column;
   justify-content: center;
   position: fixed;

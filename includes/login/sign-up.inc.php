@@ -35,7 +35,7 @@ if (isset($_POST["submit"])) {
     echo '<script>showPopup();</script>';
 
 } else {
-    header("location: ../../sign-up.php");
+    header("location: ../../hehe.php");
 }
 
 

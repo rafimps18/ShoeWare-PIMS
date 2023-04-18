@@ -20,7 +20,7 @@ require_once 'navbar.php';
 
 <body>
     <div class="content-container">
-    <div class="form-popup" id="popup">
+    <div id="popup">
       <h1>Success!</h1>
       <p>Product information inserted successfully!</p>
     </div>

@@ -18,8 +18,8 @@ require 'dbconfig/config.php';
         <h1>Sign up success!</h1>
         <p>User successfully registered!</p>
         <div class="yes-no">
-        <button class="signup-popup-button" onclick="closePopup()">Okay</button>
-        <a href="index.php">Go to login page</a>
+        <button class="pformSubmit" onclick="closePopup()">Okay</button>
+        <a class="pformSubmit" href="index.php">Go to login page</a>
         </div>
     </div>
     <div class="container">
@@ -66,11 +66,11 @@ require 'dbconfig/config.php';
     </div>
     <script>
         function showPopup() {
-            document.getElementById('signup-popup').style.visibility = 'visible';
+            document.getElementById('signup-popup').style.display = 'block';
         }
 
         function closePopup() {
-            document.getElementById('signup-popup').style.visibility = 'hidden';
+            document.getElementById('signup-popup').style.display = 'none';
         }
     </script>
 </body>

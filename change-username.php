@@ -24,9 +24,13 @@ include_once 'navbar.php';
                 <label class="pformLabel" for="new-username">New username</label>
                 <input class="new-username-label" value="<?php echo 'username'; ?>" name="username" type="text">
             </div>
+            <div class="pformItem">
+                <label class="pformLabel" for="new-username">Enter password to change username</label>
+                <input class="new-username-label" name="pwd" type="password">
+            </div>
             <div class="yes-no">
-                <button type="submit" name="submit" class="delete">Submit</button>
-                <a class="blue-btn" href="account-settings.php">Cancel</a>
+                <button class="pformSubmit" type="submit" name="submit">Submit</button>
+                <a class="pformSubmit" href="account-settings.php">Cancel</a>
             </div>
             </form>
 

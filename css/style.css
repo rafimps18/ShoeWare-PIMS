@@ -64,7 +64,7 @@ body {
   justify-content: center;
   display: flex;
   align-items: center;
-  color: black;
+  color: red;
   text-decoration: none;
 }
 .login-form-footer:hover {
@@ -366,8 +366,9 @@ h1.company-name-navbar {
 }
 
 .pformSubmit {
+  text-decoration: none;
   border: none;
-  margin-top: 10px;
+  margin-left: 10px;
   background: linear-gradient(45deg, #1d1d1f, #535353);
   color: white;
   padding: 1rem;
@@ -607,6 +608,20 @@ h1.company-name-navbar {
   background-color: rgb(69, 69, 255);
 }
 
+.back-btn {
+  text-decoration: none;
+  border: none;
+  background: linear-gradient(45deg, #1d1d1f, #535353);
+  color: #ffffff;
+  padding: 1rem;
+  border-radius: 100px;
+  text-align: center;
+  font-size: 18px;
+  height: 55px;
+  cursor: pointer;
+  margin-bottom: 30px;
+}
+
 /* sign-up page styling */
 .sign-up-content-container {
   position: absolute;
@@ -633,7 +648,7 @@ h1.company-name-navbar {
 }
 
 #signup-popup {
-  display: flex;
+  display: block;
   flex-direction: column;
   justify-content: center;
   position: fixed;

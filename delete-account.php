@@ -17,12 +17,16 @@ session_start();
     <div class="content-container">
         <div class="form-container">
             <h1>Delete account</h1>
-            <p>Are you sure you want to delete your account?</p>
-            <div class="yes-no">
-                <a class="delete" href="includes/account-settings/delete-account.inc.php?usersId=<?php echo $_SESSION["userid"] ; ?> ">Yes</a>
-                <a class="blue-btn" href="account-settings.php">No</a>
-            </div>
-
+            <p>Are you sure you want to delete your account? To continue, please enter your password:</p>
+            <form action="includes/account-settings/delete-account.inc.php?usersId=<?php echo $_SESSION['userid']?>" method="POST">
+                <div class="pformItem">
+                    <input type="password" name="pwd">
+                </div>
+                <div class="yes-no">
+                    <button class="pformSubmit" type="submit" name="submit">Submit</button>
+                    <a class="pformSubmit" href="account-settings.php">No</a>
+                </div>
+            </form>
         </div>
     </div>
 </body>

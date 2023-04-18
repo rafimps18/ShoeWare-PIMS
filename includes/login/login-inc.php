@@ -15,7 +15,6 @@ if (isset($_POST["submit"])) {
 
     loginUser($conn, $username, $pwd);
 } else {
-    createUser($conn, 'generic', 'generic@email.com', 'generic', 'generic');
     header("location: ../../form.php");
     exit();
 }
