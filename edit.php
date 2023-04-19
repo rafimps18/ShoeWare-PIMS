@@ -43,7 +43,7 @@ include_once 'navbar.php';
                     </div>
 
                     <center>
-                        <button id="btn-submit-edit-form" class="editFormSubmit" type="submit" name="submit">Submit</button>
+                        <button class="editFormSubmit" type="submit" name="submit">Submit</button>
                         <a class="back" href="database.php">Back</a>
                     </center>
                 </div>
