@@ -14,14 +14,7 @@ require 'dbconfig/config.php';
 </head>
 
 <body>
-    <div class="form-popup" id="signup-popup">
-        <h1>Sign up success!</h1>
-        <p>User successfully registered!</p>
-        <div class="yes-no">
-        <button class="pformSubmit" onclick="closePopup()">Okay</button>
-        <a class="pformSubmit" href="index.php">Go to login page</a>
-        </div>
-    </div>
+
     <div class="container">
 
 
@@ -63,16 +56,25 @@ require 'dbconfig/config.php';
                 <h1 class="company-name">ShoeWare</h1>
             </div>
         </div>
-    </div>
-    <script>
-        function showPopup() {
-            document.getElementById('signup-popup').style.display = 'block';
+        <?php
+        if (isset($_GET["error"])) {
+            if ($_GET["error"] == "none") {
+                echo '    <div class="form-popup" id="signup-popup">
+                <h1>Sign up success!</h1>
+                <p>User successfully registered!</p>
+                <div class="yes-no">
+                    <button class="pformSubmit" onclick="closePopup()">Okay</button>
+                    <a class="pformSubmit" href="index.php">Go to login page</a>
+                </div>
+            </div>';
+            }
         }
-
-        function closePopup() {
-            document.getElementById('signup-popup').style.display = 'none';
-        }
-    </script>
+        ?>
+        <script>
+            function closePopup() {
+                document.getElementById('signup-popup').style.visibility='hidden';
+            }
+        </script>
 </body>
 
 </html>

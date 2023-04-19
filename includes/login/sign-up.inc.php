@@ -32,7 +32,6 @@ if (isset($_POST["submit"])) {
     }
 
     createUser($conn, $name, $email, $username, $pwd);
-    echo '<script>showPopup();</script>';
 
 } else {
     header("location: ../../hehe.php");
