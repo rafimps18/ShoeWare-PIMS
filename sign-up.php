@@ -72,7 +72,7 @@ require 'dbconfig/config.php';
         ?>
         <script>
             function closePopup() {
-                document.getElementById('signup-popup').style.visibility='hidden';
+                document.getElementById('signup-popup').style.visibility = 'hidden';
             }
         </script>
 </body>
