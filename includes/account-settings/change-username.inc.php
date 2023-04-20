@@ -5,9 +5,9 @@ $usersId = $_GET['usersId'];
 $username = $_POST['username'];
 $pwd = $_POST['pwd'];
 $query = mysqli_query($conn, "SELECT usersPwd FROM users WHERE usersId = $usersId;");
-$userpwd = mysqli_fetch_array($query);
+$result = mysqli_fetch_array($query);
 
-$checkPwd = password_verify($pwd, $userpwd["usersPwd"]);
+$checkPwd = password_verify($pwd, $result["usersPwd"]);
 
 if ($checkPwd !== false) {
     mysqli_query($conn, "UPDATE users SET usersUid='$username' WHERE usersId='$usersId'");

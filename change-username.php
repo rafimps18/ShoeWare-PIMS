@@ -18,7 +18,7 @@ include_once 'navbar.php';
         <div class="form-container">
 
             <h1>Change username</h1>
-            <h2>Old username: <?php echo $username?></h2>
+            <h2>Current username: <?php echo $username?></h2>
             <form action="./includes/account-settings/change-username.inc.php?usersId= <?php echo $_SESSION["userid"] ; ?> " method="post">
             <div class="pformItem">
                 <label class="pformLabel" for="new-username">New username</label>
