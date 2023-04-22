@@ -73,7 +73,6 @@ include_once 'navbar.php';
             echo "No results found.";
         }
 
-        // Close database connection
         $con->close();
         ?>
     </div>

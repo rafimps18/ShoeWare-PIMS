@@ -12,23 +12,23 @@ if (isset($_POST["submit"])) {
 
     if (emptyInputSignup($name, $email, $username, $pwd, $pwdRepeat) !== false) {
         header("location: ../../sign-up.php?error=emptyinput");
-        exit(); 
+        exit();
     }
     if (invalidUid($username) !== false) {
         header("location: ../../sign-up.php?error=invaliduid");
-        exit(); 
+        exit();
     }
     if (invalidEmail($email) !== false) {
         header("location: ../../sign-up.php?error=invalidemail");
-        exit(); 
+        exit();
     }
     if (pwdMatch($pwd, $pwdRepeat) !== false) {
         header("location: ../../sign-up.php?error=passwordsdontmatch");
-        exit(); 
+        exit();
     }
     if (uidExists($conn, $username, $email) !== false) {
         header("location: ../../sign-up.php?error=usernameexists");
-        exit(); 
+        exit();
     }
 
     createUser($conn, $name, $email, $username, $pwd);
@@ -36,6 +36,3 @@ if (isset($_POST["submit"])) {
 } else {
     header("location: ../../hehe.php");
 }
-
-
-

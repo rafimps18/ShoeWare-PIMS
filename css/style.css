@@ -373,7 +373,6 @@ h1.company-name-navbar {
 }
 
 #popup {
-  visibility: hidden;
   position: fixed;
   border-radius: 15px;
   top: 48%;

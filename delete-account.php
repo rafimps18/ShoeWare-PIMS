@@ -18,7 +18,8 @@ session_start();
         <div class="form-container">
             <h1>Delete account</h1>
             <p>Are you sure you want to delete your account? To continue, please enter your password:</p>
-            <form action="includes/account-settings/delete-account.inc.php?usersId=<?php echo $_SESSION['userid']?>" method="POST">
+            <form action="includes/account-settings/delete-account.inc.php?usersId=<?php echo $_SESSION['userid'] ?>"
+                method="POST">
                 <div class="pformItem">
                     <input type="password" name="pwd">
                 </div>

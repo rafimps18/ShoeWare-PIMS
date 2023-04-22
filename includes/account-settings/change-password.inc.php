@@ -8,7 +8,6 @@ $reentered_password = mysqli_real_escape_string($conn, $_POST['pwdRepeat']);
 $current_password = mysqli_real_escape_string($conn, $_POST['pwd']);
 
 // Check whether current password matches user's actual current password
-// You should replace 'users' with the name of your users table in the following query
 $usersId = mysqli_real_escape_string($conn, $_SESSION["userid"]);
 $sql = "SELECT usersPwd FROM users WHERE usersId = '$usersId'";
 $result = mysqli_query($conn, $sql);

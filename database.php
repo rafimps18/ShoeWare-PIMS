@@ -17,14 +17,14 @@ include_once 'navbar.php';
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product Information Form</title>
-    <link rel="stylesheet" href="css/style.css"> 
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
     <div class="content-container">
         <div class="table-header-and-search">
             <div class="table-header">
-                <h1 class="tableh1">Product Database</h1>
+                <h1 class="tableh1">Product Catalog</h1>
             </div>
             <form action="search-results.php" method="get">
                 <div class="search-btn-and-input">
@@ -67,8 +67,9 @@ include_once 'navbar.php';
                 </td>
                 <td class="actions-cell">
                     <div class="actions-cell">
-                        <a class="edit" href="edit.php?pid=<?php echo $row['pid']; ?>">Edit</a>
-                        <a class="delete" onclick="confirmDelete(<?php echo $row['pid']; ?>, '<?php echo $row['pname'] ?>')">Delete</a>
+                        <a class="edit" href="edit.php?pid=<?php echo $row['pid']; ?>">Update</a>
+                        <a class="delete"
+                            onclick="confirmDelete(<?php echo $row['pid']; ?>, '<?php echo $row['pname'] ?>')">Delete</a>
                     </div>
                 </td>
             </tr>
@@ -83,7 +84,7 @@ include_once 'navbar.php';
             // Display the confirmation dialog with delete and cancel buttons
             if (confirm("Are you sure you want to delete " + pname + "?")) {
                 // If delete button is clicked, execute the delete query
-                window.location.href="includes/database/delete-inc.php?pid=" + pid; // Replace with your PHP file and query
+                window.location.href = "includes/database/delete-inc.php?pid=" + pid; // Replace with your PHP file and query
             } else {
                 // If cancel button is clicked, do nothing
             }

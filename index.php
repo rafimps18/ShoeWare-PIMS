@@ -38,6 +38,8 @@ require 'includes/login/dbh-inc.php';
                                 echo "<p class='login-error-message'>Enter your username and password</p>";
                             } else if ($_GET["error"] == "wronglogin") {
                                 echo "<p class='login-error-message'>Incorrect login information</p>";
+                            } else if ($_GET["error"] == "nouser") {
+                                echo "<p class='login-error-message'>User does not exist</p>";
                             }
                         }
                         ?>

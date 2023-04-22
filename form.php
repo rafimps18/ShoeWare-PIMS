@@ -1,10 +1,4 @@
 <?php
-require 'dbconfig/config.php';
-$pname = "";
-$pbrand = "";
-$pcolor = "";
-$price = "";
-$pquantity = "";
 require_once 'navbar.php';
 ?>
 <!DOCTYPE html>
@@ -19,17 +13,13 @@ require_once 'navbar.php';
 </head>
 
 <body>
+
     <div class="content-container">
-    <div id="popup">
-      <h1>Success!</h1>
-      <p>Product information inserted successfully!</p>
-    </div>
         <div class="form-container">
             <div class="form-header">
                 <h1 class="formh1">Product Information Form</h1>
-        
             </div>
-            <form class="product-information-form" action="form.php" method="post">
+            <form class="product-information-form" action="includes/database/insert-inc.php" method="post">
                 <div class="information-form-content">
                     <div class="pform-item">
                         <label class="pformLabel" for="pname">Product Name</label>
@@ -50,40 +40,32 @@ require_once 'navbar.php';
                     </div>
                     <div class="pform-item">
                         <label class="pformLabel" for="pquantity">Product Quantity</label>
-                        <input class="pformInput" type="number" placeholder="Enter product quantity" name="pquantity" required>
+                        <input class="pformInput" type="number" placeholder="Enter product quantity" name="pquantity"
+                            required>
                     </div>
                     <button class="pformSubmit" type="submit" name="submit-btn">Submit</button>
                 </div>
             </form>
-            <?php
-            if (isset($_POST['submit-btn'])) {
-                $pname = $_POST['pname'];
-                $pbrand = $_POST['pbrand'];
-                $pcolor = $_POST['pcolor'];
-                $price = $_POST['price'];
-                $pquantity = $_POST['pquantity'];
-
-                $query = "insert into products2 values(NULL, '$pname', '$pbrand', '$pcolor', $price ,$pquantity, CURRENT_TIMESTAMP)";
-                $query_run = mysqli_query($con, $query);
-
-                if ($query_run) {
-                    echo '
-                            <script type="text/javascript">
-                                function hideMsg()
-                                {
-                                document.getElementById("popup").style.visibility = "hidden";
-                                }
-                            
-                                document.getElementById("popup").style.visibility = "visible";
-                                window.setTimeout("hideMsg()", 2000);
-                            </script>';
-                } else {
-                    echo '<script type="text/javascript">alert("Values not inserted successfully")</script>';
-                }
-            }
-            ?>
         </div>
     </div>
+    <?php
+    if (isset($_GET["error"])) {
+        if ($_GET["error"] == "none") {
+            echo '<div class="form-popup" id="popup">
+                    <h1>Success!</h1>
+                    <p>Product information inserted successfully!</p>
+                  </div>';
+        }
+    }
+    ?>
+    <script>
+        function hideMsg() {
+            document.getElementById("popup").style.visibility = "hidden";
+        }
+
+        document.getElementById("popup").style.visibility = "visible";
+        window.setTimeout("hideMsg()", 2500);
+    </script>
 </body>
 
 </html>

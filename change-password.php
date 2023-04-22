@@ -24,7 +24,7 @@ session_start();
                 method="post" autocomplete="off">
                 <div class="pformItem">
                     <label class="pformLabel" for="pwd">Enter current password</label>
-                    <input class="new-username-label"  name="pwd" type="password">
+                    <input class="new-username-label" name="pwd" type="password">
                 </div>
                 <div class="pformItem">
                     <label class="pformLabel" for="newPwd">Enter new password</label>

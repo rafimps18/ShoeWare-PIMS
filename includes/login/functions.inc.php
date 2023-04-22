@@ -57,6 +57,7 @@ function uidExists($conn, $username, $email)
     mysqli_stmt_execute($stmt);
 
     $resultData = mysqli_stmt_get_result($stmt);
+    mysqli_stmt_close($stmt);
 
     if ($row = mysqli_fetch_assoc($resultData)) {
         return $row;
@@ -65,7 +66,7 @@ function uidExists($conn, $username, $email)
         return $result;
     }
 
-    mysqli_stmt_close($stmt);
+    
 }
 
 function createUser($conn, $name, $email, $username, $pwd)
@@ -101,7 +102,7 @@ function loginUser($conn, $username, $pwd)
 {
     $uidExists = uidExists($conn, $username, $username);
     if ($uidExists === false) {
-        header("location: ../../index.php?error=wronglogin");
+        header("location: ../../index.php?error=nouser");
         exit();
     }
     $pwdHashed = $uidExists["usersPwd"];
