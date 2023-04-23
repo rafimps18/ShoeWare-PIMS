@@ -66,7 +66,7 @@ function uidExists($conn, $username, $email)
         return $result;
     }
 
-    
+
 }
 
 function createUser($conn, $name, $email, $username, $pwd)
@@ -119,4 +119,3 @@ function loginUser($conn, $username, $pwd)
         exit();
     }
 }
-

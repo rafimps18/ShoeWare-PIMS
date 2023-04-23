@@ -247,6 +247,7 @@ h1.company-name {
     width: 80%;
   }
 
+
   .formh1 {
     display: inline;
     overflow:hidden;
@@ -351,6 +352,7 @@ h1.company-name-navbar {
   margin: auto;
   width: 500px;
   .formh1 {
+    font-weight: 600;
     font-size: 2.25em;
     margin: 10px 0px 10px 0px;
   }
@@ -395,7 +397,7 @@ h1.company-name-navbar {
   margin-left: 10px;
   background: linear-gradient(45deg, $primary-color, $secondary-color);
   color: white;
-  padding: 1rem;
+  padding: 0.89rem;
   border-radius: 100px;
   text-align: center;
   font-size: 23px;

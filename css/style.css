@@ -309,6 +309,7 @@ h1.company-name-navbar {
   width: 500px;
 }
 .form-header .formh1 {
+  font-weight: 600;
   font-size: 2.25em;
   margin: 10px 0px 10px 0px;
 }
@@ -352,7 +353,7 @@ h1.company-name-navbar {
   margin-left: 10px;
   background: linear-gradient(45deg, #1d1d1f, #535353);
   color: white;
-  padding: 1rem;
+  padding: 0.89rem;
   border-radius: 100px;
   text-align: center;
   font-size: 23px;
