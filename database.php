@@ -32,51 +32,55 @@ include_once 'navbar.php';
                     <input type="submit" name="submit" value="Search" class="search-button">
                 </div>
             </form>
+            <form method="get" action="database.php">
+                <label for="sort">Sort by:</label>
+                <select name="sort" id="sort">
+                    <option value="">--Select--</option>
+                    <option value="alphabetical">Alphabetical</option>
+                    <option value="chronological">Chronological</option>
+                    <option value="price">Price</option>
+                </select>
+                <button type="submit">Sort</button>
+            </form>
         </div>
 
         <?php
-        if (mysqli_connect_errno()) {
-            echo "Failed to connect to MySQL: " . mysqli_connect_errno();
+
+        // Get sorting method from URL query string
+        $sort = isset($_GET['sort']) ? $_GET['sort'] : '';
+
+        // Generate SQL query based on sorting method
+        switch ($sort) {
+            case 'alphabetical':
+                $sql = "SELECT * FROM products2 ORDER BY pname ASC";
+                break;
+            case 'chronological':
+                $sql = "SELECT * FROM products2 ORDER BY dateAdded ASC";
+                break;
+            case 'price':
+                $sql = "SELECT * FROM products2 ORDER BY price DESC";
+                break;
+            default:
+                $sql = "SELECT * FROM products2";
         }
-        $result = mysqli_query($con, "SELECT * FROM products2");
-        echo "<div class='table'>";
-        echo "<table id='products'><th>Product Id</th><th>Product Name</th><th>Brand</th><th>Color</th><th>Price</th><th>Quantity</th><th>Date Added</th><th>Actions</th>";
-        while ($row = mysqli_fetch_array($result)) {
-            ?>
-            <tr>
-                <td>
-                    <?php echo $row['pid'] ?>
-                </td>
-                <td>
-                    <?php echo $row['pname'] ?>
-                </td>
-                <td>
-                    <?php echo $row['pbrand'] ?>
-                </td>
-                <td>
-                    <?php echo $row['pcolor'] ?>
-                </td>
-                <td>
-                    <?php echo $row['price'] ?>
-                </td>
-                <td>
-                    <?php echo $row['pquantity'] ?>
-                </td>
-                <td>
-                    <?php echo $row['dateAdded'] ?>
-                </td>
-                <td class="actions-cell">
-                    <div class="actions-cell">
-                        <a class="edit" href="edit.php?pid=<?php echo $row['pid']; ?>">Update</a>
-                        <a class="delete"
-                            onclick="confirmDelete(<?php echo $row['pid']; ?>, '<?php echo $row['pname'] ?>')">Delete</a>
-                    </div>
-                </td>
-            </tr>
-            <?php
+
+        // Execute SQL query and generate HTML table
+        $result = $con->query($sql);
+        if ($result->num_rows > 0) {
+            echo "<div class='table'>";
+            echo "<table id='products'><th>Product Id</th><th>Product Name</th><th>Brand</th><th>Color</th><th>Price</th><th>Quantity</th><th>Date Added</th><th>Actions</th>";
+            while ($row = $result->fetch_assoc()) {
+                echo '<tr><td>' . $row["pid"] . '</td><td>' . $row["pname"] . '</td><td>' . $row["pbrand"] . '</td><td>' . $row["pcolor"] . '</td><td>' . $row["price"] . '</td><td>' . $row["pquantity"] . '</td><td>' . $row["dateAdded"] . '</td><td class="actions-cell"><div class="actions-cell"><a class="edit" href="edit.php?pid=' . $row["pid"] . '">Update</a>
+                <a class="delete" onclick="confirmDelete('.$row["pid"].', \'' . $row["pname"] . '\')">Delete</a>
+                </div></td></tr>';
+            }
+            echo "</table>";
+        } else {
+            echo "0 results";
         }
-        echo '</table>';
-        echo '</div>';
+
+        // Close database connection
+        $con->close();
         ?>
     </div>
     <script>

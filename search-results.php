@@ -62,7 +62,7 @@ include_once 'navbar.php';
                     <td>
                         <div class="actions-cell">
                             <a class="edit" href="edit.php?pid=<?php echo $row['pid']; ?>">Edit</a>
-                            <a class="delete" href="includes\database\delete-inc.php?pid=<?php echo $row['pid']; ?>">Delete</a>
+                            <a class="delete" onclick="confirmDelete(<?php echo $row["pid"];?>, '<?php echo $row["pname"];?>')">Delete</a>
                         </div>
                     </td>
                 </tr>
@@ -76,6 +76,17 @@ include_once 'navbar.php';
         $con->close();
         ?>
     </div>
+    <script>
+        function confirmDelete(pid, pname) {
+            // Display the confirmation dialog with delete and cancel buttons
+            if (confirm("Are you sure you want to delete " + pname + "?")) {
+                // If delete button is clicked, execute the delete query
+                window.location.href = "includes/database/delete-inc.php?pid=" + pid; // Replace with your PHP file and query
+            } else {
+                // If cancel button is clicked, do nothing
+            }
+        }
+    </script>
 </body>
 
 </html>
