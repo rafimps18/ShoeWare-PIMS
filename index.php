@@ -25,11 +25,11 @@ require 'includes/login/dbh-inc.php';
                 <div class="login-form-content">
                     <div class="form-item">
                         <label for="username">Enter Username</label>
-                        <input type="text" id="username" name="uid">
+                        <input type="text" id="username" name="uid" required>
                     </div>
                     <div class="form-item">
                         <label for="password">Enter Password</label>
-                        <input type="password" id="password" name="pwd">
+                        <input type="password" id="password" name="pwd" required>
                     </div>
                     <div class="form-item1">
                         <?php
@@ -47,6 +47,7 @@ require 'includes/login/dbh-inc.php';
                     <button type="submit" name="submit">Login</button>
                 </div>
             </form>
+
         </div>
         <div class="login-right">
             <div class="company-logo-and-name">
