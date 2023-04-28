@@ -246,7 +246,7 @@ nav {
   align-items: center;
 }
 
-nav a {
+nav a:not(.image-link) {
   background: linear-gradient(90deg, rgb(32, 32, 32), #1d1d1f);
   color: white;
   padding: 20px;
@@ -259,7 +259,7 @@ nav a {
   font-weight: 600;
 }
 
-nav a:hover {
+nav a:not(.image-link):hover {
   background: linear-gradient(90deg, rgb(230, 230, 230), #bdbdbd);
   color: black;
 }
