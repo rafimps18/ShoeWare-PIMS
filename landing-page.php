@@ -18,6 +18,7 @@
 
         .logo-container {
             display: flex;
+            justify-content: center;
             align-items: center;
             margin-bottom: 40px;
         }
@@ -56,7 +57,7 @@
 
         .button:hover {
             background-color: #0056b3;
-            transform: scale(1.1);
+            transform: scale(1.03);
         }
     </style>
 </head>
