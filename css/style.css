@@ -207,14 +207,13 @@ h1.company-name {
     display: none;
   }
   input[type=text], input[type=number].pformInput {
-    width: 80%;
+    width: 50vw;
   }
   .pformSubmit {
-    width: 80%;
+    width: 50vw;
   }
   .formh1 {
-    display: inline;
-    overflow: hidden;
+    width: 50vw;
   }
 }
 /* navbar.php styling */
