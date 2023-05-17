@@ -25,12 +25,7 @@ body {
 .company-name {
     font-family: "Righteous", cursive;
     font-size: 60px;
-    background: conic-gradient(#1d1d1f, #535353, rgb(116, 96, 96), #1d1d1f);
-    -webkit-background-clip: text;
-            background-clip: text;
-    color: transparent;
-    background-size: 2000px 2000px;
-    animation: company-name-ani 10s infinite linear;
+    color: #1d1d1f;
 }
 
 .button-container {
@@ -76,19 +71,3 @@ body {
     font-size: 25px;
     color:rgb(32, 32, 32);
 }
-
-/* keyframes for animation */
-@keyframes company-name-ani {
-    0% {
-      background-position: 0 0;
-    }
-    25% {
-      background-position: 0 100%;
-    }
-    50% {
-      background-position: 100% 100%;
-    }
-    100% {
-      background-position: 0 0;
-    }
-  }
