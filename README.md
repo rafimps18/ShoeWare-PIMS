@@ -34,6 +34,12 @@ It is located in "C:\xampp\htdocs"
 
 ###### 11.  Go to product_inventory and import 'loginsystem.sql'
 
+### Accessing the system
+
+###### 1.  Open your browser and enter this url: http://localhost/PIMS-SWE/index.php
+
+###### 2.  Once you are in the login page, you can login to the system with valid credentials.
+
 ## Project folder structure
 
 -  📁 `PIMS-SWE` - Contains the source codes for the project. This directory also contains the PHP files of the website's pages.
