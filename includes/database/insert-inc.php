@@ -7,6 +7,10 @@ if (isset($_POST['submit-btn'])) {
     $price = $_POST['price'];
     $pquantity = $_POST['pquantity'];
 
+    if (($price === -1) && ($pquantity === -1)) {
+        header('location: ../../form.php?error=invalidvalues');
+    }
+
     $query = "insert into products2 values(NULL, '$pname', '$pbrand', '$pcolor', $price ,$pquantity, CURRENT_TIMESTAMP)";
     $query_run = mysqli_query($con, $query);
 
