@@ -53,7 +53,7 @@ It is located in "C:\xampp\htdocs"
 
 ###### 11.  Go to product_inventory and import 'loginsystem.sql'
 
-### Accessing the system
+### Accessing the website
 
 ###### 1.  Open your browser and enter this url: http://localhost/PIMS-SWE/index.php
 
