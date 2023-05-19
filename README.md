@@ -15,6 +15,7 @@ Any Windows 7, 8, 10, and 11 commputer with a browser.
 * User Account Sign-up, Login, and Logout.
 * Data creation, retrieval/read, update, and deletion.
 * Product Catalog in tabular form.
+* User Authentication for security.
 
 ### Screenshots
 
