@@ -7,6 +7,24 @@ This system is designed to help our client, ShoeWare, keep track of their invent
 ### Supported Platforms
 Any Windows 7, 8, 10, and 11 commputer with a browser.
 
+### Screenshots
+
+##### Login Page
+![login-page](https://github.com/rafimps18/ShoeWare-PIMS/assets/114292899/b283f7e5-4e82-4dc8-94ea-1b63df38936e)
+
+##### Landing Page
+![landing-page](https://github.com/rafimps18/ShoeWare-PIMS/assets/114292899/67edbda8-0743-4571-bd16-0bdb06d91775)
+
+##### Product Information Form 
+![info-form](https://github.com/rafimps18/ShoeWare-PIMS/assets/114292899/bf0be168-b4c7-422d-8cf5-fdc0a58189e4)
+
+##### Product Catalog
+![prod-catalog](https://github.com/rafimps18/ShoeWare-PIMS/assets/114292899/ad4e2284-630d-45ac-a654-9f76ab4fb92c)
+
+##### Account Settings Page
+![acc-setting-page](https://github.com/rafimps18/ShoeWare-PIMS/assets/114292899/e05939a9-4384-48d1-aa3d-8bf0850f9cb9)
+
+
 ## Getting Started
 
 ### Installation
