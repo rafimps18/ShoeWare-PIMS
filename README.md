@@ -38,29 +38,31 @@ Any Windows 7, 8, 10, and 11 commputer with a browser.
 
 ### Installation
 
-###### 1. Download and Install XAMPP for Windows on your windows machine
+###### 1. Download and Install **XAMPP** for Windows on your windows machine
 Download it through this website: https://www.apachefriends.org/download.html
 
 ###### 2. Download this project's source code through this link: https://github.com/rafimps18/PIMS-SWE/archive/refs/heads/qaFix.zip
 
 ###### 3. Navigate to the htdocs directory
-It is located in "C:\xampp\htdocs"
+It is located in "C:\xampp\htdocs".
 
-###### 4. Move this project's files to the htdocs directory
+###### 4. Move this project's files to the htdocs directory.
 
-###### 5. Open XAMPP and start the Apache and MySQL modules
+###### 5. Open XAMPP and start the **Apache** and **MySQL** modules.
 
 ###### 6. Open your browser and enter this url: http://localhost/phpmyadmin/index.php?route=/
 
 ###### 7. On the navigation bar on the left, click New
 
-###### 8. On the Create database section, on the Database name input box, enter 'product_inventory' then click Create
+###### 8. On the Create database section, on the Database name input box, enter 'product_inventory' then click **Create**.
 
-###### 9. On the top navigation bar, click Import
+###### 9. On the top navigation bar, click **Import**.
 
-###### 10. Import the products2.sql file from the SQL directory
+###### 10. Import the **products2.sql** file from the SQL directory.
 
-###### 11.  Go to product_inventory and import 'loginsystem.sql'
+###### 11. Create another database named **loginsystem**.
+
+###### 12. Import the **users.sql** from the SQL directory.
 
 ### Accessing the website
 
