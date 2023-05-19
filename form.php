@@ -27,11 +27,13 @@ require_once 'navbar.php';
                     </div>
                     <div class="pform-item">
                         <label class="pformLabel" for="pbrand">Product Brand</label>
-                        <input class="pformInput" type="text" placeholder="Enter product brand" name="pbrand" required>
+                        <input class="pformInput" type="text" placeholder="Enter product brand" name="pbrand"
+                            pattern="^[^0-9]+$" required>
                     </div>
                     <div class="pform-item">
                         <label class="pformLabel" for="pcolor">Color</label>
-                        <input class="pformInput" type="text" placeholder="Enter color" name="pcolor" required>
+                        <input class="pformInput" id="shoe-color" type="text" placeholder="Enter color" name="pcolor"
+                            pattern="^[^0-9]+$" required>
                     </div>
                     <div class="pform-item">
                         <label class="pformLabel" for="price">Price</label>
@@ -59,6 +61,14 @@ require_once 'navbar.php';
     }
     ?>
     <script>
+        const shoeColorInput = document.getElementById('shoe-color');
+        shoeColorInput.addEventListener('input', function (event) {
+            const inputText = event.target.value;
+            const nonNumericText = inputText.replace(/[0-9]/g, '');
+            if (inputText !== nonNumericText) {
+                event.target.value = nonNumericText;
+            }
+        });
         function hideMsg() {
             document.getElementById("popup").style.visibility = "hidden";
         }

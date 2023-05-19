@@ -13,7 +13,10 @@
 <body>
     <nav>
         <div class="sidenav-container">
-            <img id="navbar-logo" src="images/logo.png">
+            <a class="image-link" href="landing-page.php">
+
+                <img id="navbar-logo" src="images/logo.png">
+            </a>
             <h1 class="company-name-navbar">ShoeWare</h1>
             <div class="navbar-links">
                 <a href="form.php">Enter a product</a>

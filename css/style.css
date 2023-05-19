@@ -207,14 +207,13 @@ h1.company-name {
     display: none;
   }
   input[type=text], input[type=number].pformInput {
-    width: 80%;
+    width: 50vw;
   }
   .pformSubmit {
-    width: 80%;
+    width: 50vw;
   }
   .formh1 {
-    display: inline;
-    overflow: hidden;
+    width: 50vw;
   }
 }
 /* navbar.php styling */
@@ -246,7 +245,7 @@ nav {
   align-items: center;
 }
 
-nav a {
+nav a:not(.image-link) {
   background: linear-gradient(90deg, rgb(32, 32, 32), #1d1d1f);
   color: white;
   padding: 20px;
@@ -259,7 +258,7 @@ nav a {
   font-weight: 600;
 }
 
-nav a:hover {
+nav a:not(.image-link):hover {
   background: linear-gradient(90deg, rgb(230, 230, 230), #bdbdbd);
   color: black;
 }
@@ -397,6 +396,7 @@ h1.company-name-navbar {
   align-items: center;
   margin: 2rem;
   padding: 2rem;
+  padding-bottom: 0.7rem;
   background-color: #fefefe;
   border-radius: 20px;
   min-height: calc(20vh - 80px);

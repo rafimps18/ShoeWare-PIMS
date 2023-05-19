@@ -7,6 +7,7 @@ $pcolor = "";
 $price = "";
 $pquantity = "";
 $pweight = "";
+$sort = isset($_GET['sort']) ? $_GET['sort'] : '';
 include_once 'navbar.php';
 ?>
 <!DOCTYPE html>
@@ -35,10 +36,26 @@ include_once 'navbar.php';
             <form method="get" action="database.php">
                 <label for="sort">Sort by:</label>
                 <select name="sort" id="sort">
-                    <option value="">--Select--</option>
-                    <option value="alphabetical">Alphabetical</option>
-                    <option value="chronological">Chronological</option>
-                    <option value="price">Price</option>
+                    <option value="" <?php
+                    if($sort===''){
+                        echo "selected";
+                    }
+                    ?>>Default</option>
+                    <option value="alphabetical"<?php
+                    if($sort==='alphabetical'){
+                        echo "selected";
+                    }
+                    ?>>Alphabetical</option>
+                    <option value="chronological"<?php
+                    if($sort==='chronological'){
+                        echo "selected";
+                    }
+                    ?>>Chronological</option>
+                    <option value="price"<?php
+                    if($sort==='price'){
+                        echo "selected";
+                    }
+                    ?>>Price</option>
                 </select>
                 <button type="submit">Sort</button>
             </form>
@@ -47,7 +64,7 @@ include_once 'navbar.php';
         <?php
 
         // Get sorting method from URL query string
-        $sort = isset($_GET['sort']) ? $_GET['sort'] : '';
+        
 
         // Generate SQL query based on sorting method
         switch ($sort) {
@@ -71,7 +88,7 @@ include_once 'navbar.php';
             echo "<table id='products'><th>Product Id</th><th>Product Name</th><th>Brand</th><th>Color</th><th>Price</th><th>Quantity</th><th>Date Added</th><th>Actions</th>";
             while ($row = $result->fetch_assoc()) {
                 echo '<tr><td>' . $row["pid"] . '</td><td>' . $row["pname"] . '</td><td>' . $row["pbrand"] . '</td><td>' . $row["pcolor"] . '</td><td>' . $row["price"] . '</td><td>' . $row["pquantity"] . '</td><td>' . $row["dateAdded"] . '</td><td class="actions-cell"><div class="actions-cell"><a class="edit" href="edit.php?pid=' . $row["pid"] . '">Update</a>
-                <a class="delete" onclick="confirmDelete('.$row["pid"].', \'' . $row["pname"] . '\')">Delete</a>
+                <a class="delete" onclick="confirmDelete(' . $row["pid"] . ', \'' . $row["pname"] . '\')">Delete</a>
                 </div></td></tr>';
             }
             echo "</table>";
