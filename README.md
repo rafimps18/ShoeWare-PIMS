@@ -7,6 +7,11 @@ This system is designed to help our client, ShoeWare, keep track of their invent
 ### Supported Platforms
 Any Windows 7, 8, 10, and 11 commputer with a browser.
 
+### Features
+* User Account Sign-up, Login, and Logout.
+* Data creation, retrieval/read, update, and deletion.
+* Product Catalog in tabular form.
+
 ### Screenshots
 
 ##### Login Page
