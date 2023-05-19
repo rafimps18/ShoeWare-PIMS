@@ -1,10 +1,11 @@
-# PIMS-SWE
+# ShoeWare Product Inventory Management System
 Product inventory management system for ShoeWare. 
 
 ## About The Project
+This system is designed to help our client, ShoeWare, keep track of their inventory in real time, so that they can always ensure that they have the products that their customers want in stock.
 
 ### Supported Platforms
-Windows 7, 8, 10, and 11.
+Any Windows 7, 8, 10, and 11 commputer with a browser.
 
 ## Getting Started
 
