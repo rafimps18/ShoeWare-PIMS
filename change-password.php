@@ -18,17 +18,6 @@ session_start();
     <div class="content-container">
 
         <div class="form-container">
-            <div class="form-item1">
-                <?php
-                if (isset($_GET["error"])) {
-                    if ($_GET["error"] == "passwordtooshort") {
-                        echo "<p class='login-error-message'>New password must be at least 10 characters long.</p>";
-                    } else if ($_GET["error"] == "currentpasswordincorrect") {
-                        echo "<p class='login-error-message'>Current password is incorrect.</p>";
-                    }
-                }
-                ?>
-            </div>
 
             <h1>Change Password</h1>
             <form
@@ -47,7 +36,17 @@ session_start();
                     <label class="pformLabel" for="pwdRepeat">Repeat new password</label>
                     <input class="new-username-label" name="pwdRepeat" type="password">
                 </div>
-
+                <div class="form-item1">
+                    <?php
+                    if (isset($_GET["error"])) {
+                        if ($_GET["error"] == "passwordtooshort") {
+                            echo "<p class='login-error-message'>New password must be at least 10 characters long.</p>";
+                        } else if ($_GET["error"] == "currentpasswordincorrect") {
+                            echo "<p class='login-error-message'>Current password is incorrect.</p>";
+                        }
+                    }
+                    ?>
+                </div>
                 <div class="yes-no">
                     <button class="pformSubmit" type="submit" name="submit">Submit</button>
                     <a class="pformSubmit" href="account-settings.php">Cancel</a>
