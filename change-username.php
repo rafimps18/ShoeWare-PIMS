@@ -32,6 +32,16 @@ include_once 'navbar.php';
                     <label class="pformLabel" for="new-username">Enter password to change username</label>
                     <input class="new-username-label" name="pwd" type="password">
                 </div>
+                <div class="pformItem">
+                    
+                <?php
+                if (isset($_GET["error"])) {
+                    if ($_GET["error"] == "passwordincorrect") {
+                        echo "<p class='login-error-message'>Incorrect Password</p>";
+                    }
+                }
+                ?>
+            </div>
                 <div class="yes-no">
                     <button class="pformSubmit" type="submit" name="submit">Submit</button>
                     <a class="pformSubmit" href="account-settings.php">Cancel</a>

@@ -14,5 +14,5 @@ if ($checkPwd !== false) {
     $_SESSION["useruid"] = $username;
     header('location: ..\..\account-settings.php');
 } else {
-    header('location: ..\..\change-username.php?error="passwordincorrect"');
+    header('location: ..\..\change-username.php?error=passwordincorrect');
 }
