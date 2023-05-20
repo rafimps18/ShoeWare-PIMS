@@ -5,7 +5,7 @@ Product inventory management system for ShoeWare.
 This system is designed to help our client, ShoeWare, keep track of their inventory in real time, so that they can always ensure that they have the products that their customers want in stock.
 
 ### Supported Platforms
-Any Windows 7, 8, 10, and 11 commputer with a browser.
+Any Windows 7, 8, 10, and 11 computer with a browser.
 
 ### Software Requirements
 * XAMPP
