@@ -42,7 +42,7 @@ Any Windows 7, 8, 10, and 11 computer with a browser.
 ###### 1. Download and Install **XAMPP** for Windows on your windows machine
 Download it through this website: https://www.apachefriends.org/download.html
 
-###### 2. Download this project's source code through this link: https://github.com/rafimps18/PIMS-SWE/archive/refs/heads/qaFix.zip
+###### 2. Download this project's source code through this link: https://github.com/rafimps18/ShoeWare-PIMS/archive/refs/heads/master.zip
 
 ###### 3. Navigate to the htdocs directory
 It is located in "C:\xampp\htdocs".
